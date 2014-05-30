@@ -25,6 +25,7 @@ import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionEffect;
 import org.maxgamer.QuickShop.QuickShop;
 
+@SuppressWarnings("deprecation")
 public class Util{
 	private static HashSet<Material> tools = new HashSet<Material>();
 	private static HashSet<Material> blacklist = new HashSet<Material>();
