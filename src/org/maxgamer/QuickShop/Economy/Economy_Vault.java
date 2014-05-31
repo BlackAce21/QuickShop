@@ -1,5 +1,7 @@
 package org.maxgamer.QuickShop.Economy;
 
+import net.milkbowl.vault.economy.Economy;
+
 import org.bukkit.Bukkit;
 
 public class Economy_Vault implements EconomyCore{
@@ -15,7 +17,7 @@ public class Economy_Vault implements EconomyCore{
 	private boolean setupEconomy(){
 		org.bukkit.plugin.RegisteredServiceProvider<net.milkbowl.vault.economy.Economy> economyProvider = Bukkit.getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
         if (economyProvider != null) {
-        	vault = economyProvider.getProvider();
+        	this.vault = ((Economy)economyProvider.getProvider());
         }
 
         return (vault != null);
